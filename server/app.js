@@ -14,17 +14,19 @@ if (process.env.NODE_ENV === "test") {
 }
 
 mongoose.set("useFindAndModify", false);
-mongoose
-  .connect(process.env.MONGODB_CONNECTION, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-  })
-  .then(function(success) {
+
+(async () => {
+  try {
+    await mongoose.connect(process.env.MONGODB_CONNECTION, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true
+    });
     console.log("succesfully connect to database");
-  })
-  .catch(function(err) {
-    console.log(err);
-  });
+  } catch (e) {
+    console.error(err.message);
+    process.exit(1);
+  }
+})();
 
 app.use(cors());
 app.use(morgan("dev"));
