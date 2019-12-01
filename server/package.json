@@ -1,0 +1,45 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "```sh URL: http://127.0.0.1:3000/users/register METHOD : POST Authenticated Required : NO Authorized Required : NO Data Input :     {         name: \"nobita\",         email: \"nobita@mail.com\",         password: \"nobita\"     } Response Status : 201 Data Output :     {         \"_id\": \"5ccf109c227c7e1387ab12f1\",         \"name\": \"nobita\",         \"email\": \"nobita@mail.com\",         \"password\": \"$2a$10$BwEf3Bwsa8PJfliNr7UVOOoHPU0z8ucUdyt9JyJzM4KU3hdTwxHTW\",         \"__v\": 0     } Response Status : 400 Bad Request Output :     \"User validation failed: name: Name is required, email: Email is required, password: Password is required\"",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "@google-cloud/storage": "^1.2.0",
+    "bcrypt": "^3.0.6",
+    "bcryptjs": "^2.4.3",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.5.1",
+    "mocha": "^6.1.4",
+    "mongoose": "^5.5.7",
+    "morgan": "^1.9.1",
+    "multer": "^1.4.1",
+    "nodemailer": "^6.2.1",
+    "vue-good-table": "^2.16.5",
+    "vuex": "^3.1.1"
+  },
+  "scripts": {
+    "test": "NODE_ENV=test mocha -w",
+    "build": "NODE_ENV=development nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mlutfiibra/e-commerce.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mlutfiibra/e-commerce/issues"
+  },
+  "homepage": "https://github.com/mlutfiibra/e-commerce#readme",
+  "devDependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.0.0",
+    "mochawesome": "^3.1.2"
+  }
+}
