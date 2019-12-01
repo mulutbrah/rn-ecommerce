@@ -64,7 +64,7 @@ Output :
     "Internal Server Error"
 ```
 
-## list User
+## User List
 
 ```sh
 http://127.0.0.1:3000/users
@@ -139,7 +139,7 @@ Output :
     "Internal Server Error"
 ```
 
-## list Product
+## Product List
 
 ```sh
 http://localhost:3000/products
@@ -256,7 +256,7 @@ Output :
     "Internal Server Error"
 ```
 
-## list Carts
+## Carts List
 
 ```sh
 http://localhost:3000/carts
