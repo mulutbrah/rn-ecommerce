@@ -10,14 +10,21 @@ import AppNavigator from "./navigation/AppNavigator";
 export default function App(props) {
   const [isLoadingComplete, setIsLoadingComplete] = useState(false);
 
-  useEffect(async () => {
-    await Font.loadAsync({
-      Roboto: require("native-base/Fonts/Roboto.ttf"),
-      Roboto_medium: require("native-base/Fonts/Roboto_medium.ttf"),
-      ...Ionicons.font
-    });
+  useEffect(() => {
+    async function loadFont() {
+      try {
+        Font.loadAsync({
+          Roboto: require("native-base/Fonts/Roboto.ttf"),
+          Roboto_medium: require("native-base/Fonts/Roboto_medium.ttf"),
+          ...Ionicons.font
+        });
+        setIsLoadingComplete(true);
+      } catch (e) {
+        console.log(e);
+      }
+    }
 
-    setIsLoadingComplete(true);
+    loadFont();
   }, []);
 
   if (!isLoadingComplete && !props.skipLoadingScreen) {

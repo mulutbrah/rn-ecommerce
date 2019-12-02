@@ -6,7 +6,7 @@ import LoginForm from "../components/Form";
 
 import styles from "./styles";
 
-export default function HomeScreen() {
+export default function LoginScreen() {
   return (
     <View style={styles.mainContainer}>
       <LoginForm />
@@ -14,7 +14,7 @@ export default function HomeScreen() {
   );
 }
 
-HomeScreen.navigationOptions = {
+LoginScreen.navigationOptions = {
   header: null
 };
 
@@ -80,7 +80,7 @@ function handleLearnMorePress() {
 //     alignItems: "center",
 //     marginHorizontal: 50
 //   },
-//   homeScreenFilename: {
+//   LoginScreenFilename: {
 //     marginVertical: 7
 //   },
 //   codeHighlightText: {

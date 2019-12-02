@@ -6,8 +6,9 @@ import {
 } from "react-navigation";
 
 import TabBarIcon from "../components/TabBarIcon";
-import HomeScreen from "../screens/HomeScreen";
-import LinksScreen from "../screens/LinksScreen";
+import LoginScreen from "../screens/LoginScreen";
+import ProductsScreen from "../screens/ProductsScreen";
+import ProductDetailScreen from "../screens/ProductDetailScreen";
 import SettingsScreen from "../screens/SettingsScreen";
 
 const config = Platform.select({
@@ -15,15 +16,15 @@ const config = Platform.select({
   default: {}
 });
 
-const HomeStack = createStackNavigator(
+const LoginStack = createStackNavigator(
   {
-    Home: HomeScreen
+    Login: LoginScreen
   },
   config
 );
 
-HomeStack.navigationOptions = {
-  tabBarLabel: "Home",
+LoginStack.navigationOptions = {
+  tabBarLabel: "Login",
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
@@ -36,17 +37,31 @@ HomeStack.navigationOptions = {
   )
 };
 
-HomeStack.path = "";
+LoginStack.path = "";
 
-const LinksStack = createStackNavigator(
-  {
-    Links: LinksScreen
+const ProductStack = createStackNavigator({
+  Product: {
+    screen: ProductsScreen,
+    navigationOptions: () => ({
+      title: "Product List",
+      headerStyle: {
+        backgroundColor: "#fff"
+      }
+    })
   },
-  config
-);
+  ProductDetail: {
+    screen: ProductDetailScreen,
+    navigationOptions: () => ({
+      title: "back",
+      headerStyle: {
+        backgroundColor: "#fff"
+      }
+    })
+  }
+});
 
-LinksStack.navigationOptions = {
-  tabBarLabel: "Links",
+ProductStack.navigationOptions = {
+  tabBarLabel: "Products",
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
@@ -55,7 +70,7 @@ LinksStack.navigationOptions = {
   )
 };
 
-LinksStack.path = "";
+ProductStack.path = "";
 
 const SettingsStack = createStackNavigator(
   {
@@ -77,8 +92,8 @@ SettingsStack.navigationOptions = {
 SettingsStack.path = "";
 
 const tabNavigator = createBottomTabNavigator({
-  HomeStack,
-  LinksStack,
+  LoginStack,
+  ProductStack,
   SettingsStack
 });
 
