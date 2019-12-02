@@ -1,5 +1,5 @@
 import axios from "axios";
 
-export const rnComs = axios.create({
+export const api = axios.create({
   baseURL: "https://localhost:3000"
 });
