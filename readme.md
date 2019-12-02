@@ -1,6 +1,8 @@
 # E COMS by mlutfiibra
 
-## Register
+## Authentication
+
+### Register
 
 ```sh
 URL: http://127.0.0.1:3000/register
@@ -31,7 +33,7 @@ Output :
     "Internal Server Error"
 ```
 
-## Login
+### Login
 
 ```sh
 URL: http://127.0.0.1:3000/login
@@ -64,7 +66,9 @@ Output :
     "Internal Server Error"
 ```
 
-## User List
+## Users
+
+### User List
 
 ```sh
 http://127.0.0.1:3000/users
@@ -94,7 +98,7 @@ Output :
     "Internal Server Error"
 ```
 
-## Find User By Id
+### Find User By Id
 
 ```sh
 http://127.0.0.1:3000/users/5cd76100aaa5a74b2da055f6
@@ -119,7 +123,7 @@ Output :
     "Internal Server Error"
 ```
 
-## Update User By Id
+### Update User By Id
 
 ```sh
 http://127.0.0.1:3000/users/5cd76100aaa5a74b2da055f6
@@ -139,7 +143,9 @@ Output :
     "Internal Server Error"
 ```
 
-## Product List
+## Products
+
+### Product List
 
 ```sh
 http://localhost:3000/products
@@ -170,7 +176,7 @@ Output :
     "Internal Server Error"
 ```
 
-## Create Product
+### Create Product
 
 ```sh
 http://localhost:3000/products
@@ -204,7 +210,7 @@ Output :
     "Internal Server Error"
 ```
 
-## Delete Product
+### Delete Product
 
 ```sh
 http://localhost:3000/products/5cd767ebaaa5a74b2da055fc
@@ -233,7 +239,7 @@ Output :
     "Internal Server Error"
 ```
 
-## Update Product
+### Update Product
 
 ```sh
 http://localhost:3000/products/5cd6d56b2fc1c94b08fde8c9
@@ -256,7 +262,9 @@ Output :
     "Internal Server Error"
 ```
 
-## Carts List
+## Carts
+
+### Cart List
 
 ```sh
 http://localhost:3000/carts
@@ -287,7 +295,7 @@ Output :
     "Internal Server Error"
 ```
 
-## Create Carts
+### Create Cart
 
 ```sh
 http://localhost:3000/carts
@@ -321,7 +329,7 @@ Output :
     "Internal Server Error"
 ```
 
-## Delete Cart
+### Delete Cart
 
 ```sh
 http://localhost:3000/products/5cd767ebaaa5a74b2da055fc
@@ -350,7 +358,7 @@ Output :
     "Internal Server Error"
 ```
 
-## Delete Carts Belongs
+### Delete Cart Belongs
 
 ```sh
 http://localhost:3000/carts/belongs/5cd767ebaaa5a74b2da055fc
@@ -379,7 +387,9 @@ Output :
     "Internal Server Error"
 ```
 
-## List Transactions
+## Transactions
+
+### Transaction List
 
 ```sh
 http://localhost:3000/transactions
@@ -402,7 +412,7 @@ Output :
     "Internal Server Error"
 ```
 
-## List User Transactions
+### List User Transactions
 
 ```sh
 http://localhost:3000/transactions/user-transaction
@@ -425,7 +435,7 @@ Output :
     "Internal Server Error"
 ```
 
-## Create Transaction
+### Create Transaction
 
 ```sh
 http://localhost:3000/transactions
@@ -459,7 +469,7 @@ Output :
     "Internal Server Error"
 ```
 
-## Update Transaction Status
+### Update Transaction Status
 
 ```sh
 http://localhost:3000/transactions/delivered
