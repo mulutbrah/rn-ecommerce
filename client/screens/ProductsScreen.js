@@ -18,12 +18,12 @@ function Item({ data, index, onPressHandle }) {
       <View style={styles.content}>
         <View style={styles.imageContainer}>
           <Image
-            source={data.links && { uri: data.links.mission_patch_small }}
-            style={styles.image}
+            style={{ width: "100%", height: 100 }}
+            source={{ uri: data.picture_url }}
           />
         </View>
         <Text>{data.name}</Text>
-        <Text>{data.category}</Text>
+        <Text>Genre: {data.category}</Text>
       </View>
     </TouchableOpacity>
   );
